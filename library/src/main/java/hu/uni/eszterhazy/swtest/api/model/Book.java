@@ -15,7 +15,7 @@ public class Book {
     @ElementCollection(targetClass = String.class)
     private Collection<String> authors;
 
-    public Book(String title, Collection<String> authors) {
+    public Book(String isbn, String title, Collection<String> authors) {
         this.isbn = isbn;
         this.title = title;
         this.authors = authors;
