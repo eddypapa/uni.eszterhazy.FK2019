@@ -29,6 +29,6 @@ public interface BookManagerService {
      * @param author
      * @return
      */
-    Collection<Book> listBokkOfAuthor(String author);
+    Collection<Book> listBookOfAuthor(String author);
 
 }
