@@ -23,8 +23,11 @@ public class BookManager implements BookManagerService {
 
     @Override
     public Collection<Book> listBooks() {
-        Collection<Book> result = new ArrayList<>()
-        return null;
+        Collection<Book> result = new ArrayList<>();
+        for (Book book : bookRepository.findAll()){
+            result.add(book);
+        }
+        return result;
     }
 
     @Override
