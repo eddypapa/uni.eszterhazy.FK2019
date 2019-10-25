@@ -1,15 +1,18 @@
 package hu.uni.eszterhazy.swtest.api.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
 public class Book {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
     private String isbn;
     private String title;
+    @ElementCollection(targetClass = String.class)
     private Collection<String> authors;
 
     public Book(String title, Collection<String> authors) {
